@@ -10,7 +10,7 @@ use App\Http\Controllers\ArsipController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/scan/{kode_barcode}', [ArsipController::class, 'cariArsip']);
+Route::get('/scan/{kode_qr}', [ArsipController::class, 'cariArsip']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

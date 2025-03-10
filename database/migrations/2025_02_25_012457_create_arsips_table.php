@@ -14,6 +14,7 @@ return new class extends Migration
     Schema::create('arsips', function (Blueprint $table) {
         $table->id();
         $table->string('kode_barcode')->unique();
+        $table->string('kode_arsip')->unique();
         $table->string('nama_arsip');
         $table->string('lokasi');
         $table->text('deskripsi')->nullable();

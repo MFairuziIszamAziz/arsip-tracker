@@ -15,7 +15,7 @@ use App\Http\Controllers\ArsipController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/scan');
 });
 
 Route::get('/scan', [ArsipController::class, 'scan'])->name('scan');

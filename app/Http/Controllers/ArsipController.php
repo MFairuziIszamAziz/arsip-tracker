@@ -10,9 +10,9 @@ class ArsipController extends Controller
     public function scan(){
         return view ('scan');
     }
-    public function cariArsip($barcode)
+    public function cariArsip($qrcode)
     {
-        $arsip = Arsip::where('kode_barcode', $barcode)->first();
+        $arsip = Arsip::where('kode_qr', $qrcode)->first();
 
         if (!$arsip){
             return response ()->json(['message'=>'Arsip tidak ditemukan'], 404);
